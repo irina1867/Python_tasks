@@ -7,5 +7,10 @@ while True:
         print('Неправильно введенные данные. Попробуйте еще раз')
         continue
     break
+
 for idx, word in enumerate(var_str.split()):
-    print(idx + 1, (word, word[:11])[len(word) > 10])
+    print(idx + 1, (word, word[:10])[len(word) > 10])
+
+list_str = var_str.split()
+for idx in range(len(list_str)):
+    print(idx + 1, list_str[idx][:10])

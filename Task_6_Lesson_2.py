@@ -6,13 +6,15 @@
 products, order = [], 1
 title, price, amount = None, None, None
 
-while True:
+
+q = 'N'
+
+while q not in ['Y', 'y']:
     if title is None:
         tmp = input('Введите название товара: ')
         if not tmp.isalnum():
             print('Наименование товара не может быть пустым. Попробуйте еще раз.')
             continue
-
         title = tmp
 
     if price is None:
@@ -20,7 +22,6 @@ while True:
         if not tmp.isdigit():
             print('Цена должна быть целым числомю. Попробуйте еще раз.')
             continue
-
         price = int(tmp)
 
     if amount is None:
@@ -52,22 +53,15 @@ while True:
     order += 1
 
     print(products)
-
     q = input('Формирование списка завершено? (Y/N)) ')
-    if q.lower() == 'Y':
-        break
 
-analitics = {
-    'title': [],
-    'price': [],
-    'amount': [],
-    'unit': set()
-}
 
-for _, item in products:
-    analitics['title'].append(item['title'])
-    analitics['price'].append(item['price'])
-    analitics['amount'].append(item['amount'])
-    analitics['unit'].add(item['unit'])
 
-print(analitics)
+
+for item in products:
+    temp_title = item[1]['title']
+    temp_p = item[1]['price']
+    temp_a = item[1]['amount']
+    temp_u = item[1]['unit']
+    print(f'{item[0]} \t {temp_title} \t {temp_p} \t {temp_a} \t {temp_u}')
+

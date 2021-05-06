@@ -15,7 +15,12 @@ seasons_dict = {
 }
 while True:
     month_number = input('Пожалуйста введите номер месяца: ')
-    if month_number not in sum(seasons_dict.values(), []):
+    is_find = 0
+    for season in seasons_dict.keys():
+        if month_number in seasons_dict[season]:
+            is_find = 1
+            break
+    if is_find == 0:
         print('Неправильно введенный номер месяца. Попробуйте еще раз')
         continue
     break
