@@ -13,3 +13,5 @@ for el in count(int(input('Введите стартовое число '))):
         break
 
 print('ВСЁ!')
+
+# change 2021-05-21
