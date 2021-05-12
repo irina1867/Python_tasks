@@ -14,3 +14,5 @@ for idx, word in enumerate(var_str.split()):
 list_str = var_str.split()
 for idx in range(len(list_str)):
     print(idx + 1, list_str[idx][:10])
+
+    # 2021-05-12 change

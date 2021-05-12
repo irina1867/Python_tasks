@@ -6,6 +6,8 @@ New_list = [1, 2.5, "Юольшое число", 725, 254.6, 1212]
 for i in range(len(New_list)):
     print(i, "-й элемент списка", type(New_list[i]))
 
+# 2021-05-12 change
+
 
 
 
