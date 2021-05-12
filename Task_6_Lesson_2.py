@@ -65,3 +65,4 @@ for item in products:
     temp_u = item[1]['unit']
     print(f'{item[0]} \t {temp_title} \t {temp_p} \t {temp_a} \t {temp_u}')
 
+# 2021-05-12 change

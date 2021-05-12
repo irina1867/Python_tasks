@@ -17,3 +17,5 @@ score_list.sort(reverse=True)
 #     elif (score_list[i] > user_place) and (score_list[i+1] < user_place):
 #         score_list.insert(i+1, user_place)
 print(f"обновленный список: {score_list}")
+
+# 2021-05-12 change

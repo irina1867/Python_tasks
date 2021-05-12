@@ -30,3 +30,5 @@ for season, months in seasons_list:
 for season, months in seasons_dict.items():
     if month_number in months:
         print(f'Через словарь определено, что месяц с номером {month_number} это {season}')
+
+# 2021-05-12 change
