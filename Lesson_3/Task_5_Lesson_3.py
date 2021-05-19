@@ -4,22 +4,15 @@
 # Если специальный символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к
 # полученной ранее сумме и после этого завершить программу.
 
-def my_sum ():
-    sum_res = 0
-    ex = False
-    while ex == False:
-        number = input('Input numbers or Q for quit - ').split()
-
-        res = 0
-        for el in range(len(number)):
-            if number[el] == 'q' or number[el] == 'Q':
-                ex = True
-                break
-            else:
-                res = res + int(number[el])
-        sum_res = sum_res + res
-        print(f'Current sum is {sum_res}')
-    print(f'Your final sum is {sum_res}')
+def my_sum(numbers):
+    if '$' in numbers:
+        numbers = numbers.split('$')[0]
+    return sum(map(int, numbers.split()))
 
 
-my_sum() 
+s = 0
+numbers = ''
+while '$' not in numbers:
+    numbers = input('Input numbers')
+    s += my_sum(numbers)
+    print(s)

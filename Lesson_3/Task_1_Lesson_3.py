@@ -1,12 +1,13 @@
 # Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 
-def my_func (x, y):
+def my_func(x, y):
     try:
-        z = x / y
-        return z
+        return int(x) / int(y)
     except ZeroDivisionError:
         return "y is'n be a zero"
     except ValueError:
         return "enter only number"
-print(my_func(int(input("Enter x = ")), int(input("Enter y = "))))
+
+
+print(my_func(input("Enter x = "), input("Enter y = ")))
